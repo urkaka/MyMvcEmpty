@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model MyMvcEmpty.Class
+<h2>在Core Mvc中使用Options</h2>
+<h3>Datetime.Now:@ViewBag.TV</h3>
+<h4>Class No:@Model.ClassNo</h4>
+<h4>ClassDesc:@Model.ClassDesc</h4>
+<h3>
+    Student:
+</h3>
+<div>
+    @foreach (var student in Model.Students)
+    {
+        <span>Name:@student.Name</span>
+        <span>Age:@student.Age</span>
+    }
+</div>

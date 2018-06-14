@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Index2";
+}
+@using Microsoft.Extensions.Options;
+@inject IOptionsSnapshot<MyMvcEmpty.Class> ClassAccesser
+
+<h2>配置的热更新 - IOptions改成IOptionsSnapshot即可（对比Index2）</h2>
+<h3>把注入直接取出来，通过依赖注入框架直接在视图中显示出来</h3>
+<h2>Index</h2>
+<h4>Class No:@ClassAccesser.Value.ClassNo</h4>
+<h4>ClassDesc:@ClassAccesser.Value.ClassDesc</h4>
+<h3>
+    Student:
+</h3>
+<div>
+    @foreach (var student in ClassAccesser.Value.Students)
+    {
+        <span>Name:@student.Name</span>
+        <span>Age:@student.Age</span>
+    }
+</div>
