@@ -101,6 +101,7 @@ namespace MyMvcEmpty
             app.UseMvcWithDefaultRoute();//使用MVC并使用默认路由
             #endregion
 
+            //test
 
         }
     }
